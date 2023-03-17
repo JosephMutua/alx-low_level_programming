@@ -11,9 +11,16 @@ int main(void)
 	while (x < 10)
 	{
 		putchar((x % 10) + '0');
-		putchar(',');
-		putchar(' ');
-		x++;
+		if (x < 9)
+		{
+			putchar(',');
+			putchar(' ');
+			x++;
+		}
+		else
+		{
+			break;
+		}
 	}
 	putchar('\n');
 	return (0);
