@@ -1,4 +1,3 @@
-#include "_putchar.h"
 # include "main.h"
 /**
  * main - The starting point of the execution
