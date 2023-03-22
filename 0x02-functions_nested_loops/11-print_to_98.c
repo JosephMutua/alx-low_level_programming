@@ -25,24 +25,6 @@ void print_to_98(int n)
 				_putchar((i / 10) + '0');
 				_putchar((i % 10) + '0');
 			}
-			else if (i < 0)
-			{
-				if (_abs(i) < 10)
-				{
-					_putchar('-');
-					_putchar(_abs(i) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-				else
-				{
-					_putchar('-');
-					_putchar((_abs(i) / 10) + '0');
-					_putchar((_abs(i) % 10) + '0');
-					_putchar(',');
-					_putchar(' ');
-				}
-			}
 			else
 			{
 				_putchar((i / 10) + '0');
