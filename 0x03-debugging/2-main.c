@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - prints the largest of the 3 integers
+ * main - prints the largest of 3 integers
  * Return: 0
  */
 
@@ -14,7 +14,6 @@ int main(void)
 	a = 972;
 	b = -98;
 	c = 0;
-
 	largest = largest_number(a, b, c);
 
 	printf("%d is the largest number\n", largest);
