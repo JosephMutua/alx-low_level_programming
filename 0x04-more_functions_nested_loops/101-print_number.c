@@ -8,7 +8,7 @@
  */
 void print_number(int n)
 {
-	if ( n < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		n = abs(n);
@@ -19,7 +19,7 @@ void print_number(int n)
 		}
 		_putchar(n % 10 + '0');
 	}
-	else if ( n > 0)
+	else if (n > 0)
 	{
 		if (n >= 1000)
 		{
@@ -40,5 +40,4 @@ void print_number(int n)
 	}
 	else
 		_putchar(n + '0');
-}
-	
+}	
