@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+
 /**
  * _strcpy - Copies a string to another destination
  * @dest: the pointer to where the string is to be copied.
