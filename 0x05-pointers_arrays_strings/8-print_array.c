@@ -28,16 +28,6 @@ void print_array(int *a, int n)
 	}
 	else
 	{
-		for (i = n; i >= 0; i--)
-		{
-			if (i == n)
-			{
-				printf("%d", a[i]);
-			}
-			else
-			{
-				printf("%d, ", a[i]);
-			}
-		}
+		printf("\n");
 	}
 }
