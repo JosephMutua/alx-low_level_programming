@@ -3,7 +3,7 @@
 /**
  * _strcpy - Copies a string to another destination
  * @dest: the pointer to where the string is to be copied.
- * @src: the string that is to be coppied. 
+ * @src: the string that is to be coppied.
  *
  * Return: Always the string.
  */
