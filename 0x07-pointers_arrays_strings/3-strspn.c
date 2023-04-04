@@ -9,24 +9,21 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int j;
+	unsigned int i;
 
-	j = 1;
-	while (*s)
+	i = 1;
+	while (*accept)
 	{
-		while (*accept)
+		while (*s)
 		{
-			if (*s == *accept)
+			if (*accept == *s)
 			{
 				break;
 			}
-			else
-			{
-				j++;
-			}
-			accept++;
+			s++;
 		}
-		s++;
+		accept++;
+		i++;
 	}
-	return (j);
+	return (i);
 }
