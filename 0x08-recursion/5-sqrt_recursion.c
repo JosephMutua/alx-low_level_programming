@@ -1,10 +1,32 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion - find the square root of n.
- * @n: the value whose square root is being determined
+ * _sqr - this function determines the square of a number
+ * @i: the expected results
+ * @j: the starting point for the guess.
  *
- * Return: the squareroot.
+ * Return: the value of i where the j * j == i.
+ */
+int _sqr(int i, int j);
+
+int _sqr(int i, int j)
+{
+	if ((j * j) == i)
+	{
+		return (j);
+	}
+	else if ((j * j) > i)
+	{
+		return (-1);
+	}
+	return (_sqr(i, j + 1));
+}
+
+/**
+ * _sqrt_recursion - determines the squareroot of a number
+ * @n: the number whose square root is being determined
+ *
+ * Return: the squareroot of n.
  */
 int _sqrt_recursion(int n)
 {
@@ -20,5 +42,5 @@ int _sqrt_recursion(int n)
 	{
 		return (0);
 	}
-	return (_sqrt_recursion(n - 1));
+	return (_sqr(n, 1));
 }
