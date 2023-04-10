@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-/**main - prints all the arg vectors
+/**
+ * main - prints all the arg vectors
  * @argc: the number of argv
  * @argv: an array of all arguements.
  *
