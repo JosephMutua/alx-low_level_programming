@@ -31,8 +31,22 @@ char *str_concat(char *s1, char *s2)
 	char *constr;
 	unsigned int i, lens1, lens2;
 
-	lens1 = _strlen(s1);
-	lens2 = _strlen(s2);
+	if (s1 == NULL)
+	{
+		lens1 = 0;
+	}
+	else
+	{
+		lens1 = _strlen(s1);
+	}
+	if (s2 == NULL)
+	{
+		lens2 = 0;
+	}
+	else
+	{
+		lens2 = _strlen(s2);
+	}
 	constr = malloc(sizeof(char) * (lens1 + lens2));
 	if (constr == 0)
 	{
