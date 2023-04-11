@@ -31,7 +31,7 @@ char *_strdup(char *str)
 	unsigned int len, i;
 
 	len = _strlen(str);
-	if (str == 0)
+	if (!str)
 	{
 		return (NULL);
 	}
