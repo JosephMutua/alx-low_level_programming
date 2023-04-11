@@ -33,7 +33,7 @@ char *_strdup(char *str)
 	len = _strlen(str);
 	if (str == 0)
 	{
-		return (0);
+		return (NULL);
 	}
 	copystr = (char *) malloc(sizeof(char) * len);
 	if (copystr == 0)
