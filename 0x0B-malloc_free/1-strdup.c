@@ -3,7 +3,7 @@
 
 /**
  * _strlen - finds the length of a string.
- * @str - the length of the string.
+ * @str: the length of the string.
  *
  * Return: length of the string
  */
@@ -17,7 +17,7 @@ int _strlen(char *str)
 		i++;
 		str++;
 	}
-	return (i);
+	return (i + 1);
 }
 /**
  * _strdup - returnts a copy of a string.
@@ -32,8 +32,14 @@ char *_strdup(char *str)
 
 	len = _strlen(str);
 	if (str == 0)
+	{
 		return (0);
+	}
 	copystr = (char *) malloc(sizeof(char) * len);
+	if (copystr == 0)
+	{
+		return (0);
+	}
 	for (i = 0; i < len; i++)
 	{
 		copystr[i] = *str;
