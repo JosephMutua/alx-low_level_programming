@@ -30,11 +30,11 @@ char *_strdup(char *str)
 	char *copystr;
 	unsigned int len, i;
 
-	len = _strlen(str);
 	if (str == 0)
 	{
-		return (0);
+		return (NULL);
 	}
+	len = _strlen(str);
 	copystr = (char *) malloc(sizeof(char) * len);
 	if (copystr == 0)
 	{
