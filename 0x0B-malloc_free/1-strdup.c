@@ -31,9 +31,9 @@ char *_strdup(char *str)
 	unsigned int len, i;
 
 	len = _strlen(str);
-	if (str == NULL)
+	if (str == 0)
 	{
-		return (NULL);
+		return (0);
 	}
 	copystr = (char *) malloc(sizeof(char) * len);
 	if (copystr == 0)
