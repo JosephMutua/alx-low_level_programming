@@ -29,20 +29,18 @@ unsigned int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *constr, *empty;
+	char *constr, *em;
 	unsigned int i;
 
-	empty = "";
+	em = "";
 	if (s1 == NULL)
-	{
-		s1 = empty;
-	}
+		s1 = em;
 	if (s2 == NULL)
-	{
-		s2 = empty;
-	}
+		s2 = em;
 
-	constr = malloc(sizeof(*s1) * _strlen(s1));
+	if (n >= _strlen(s2))
+		n = _strlen(s2);
+	constr = malloc(sizeof(*s1) * (_strlen(s1) + n));
 	if (constr == NULL)
 	{
 		return (NULL);
