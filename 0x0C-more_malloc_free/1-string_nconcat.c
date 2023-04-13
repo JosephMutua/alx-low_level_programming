@@ -29,31 +29,24 @@ unsigned int _strlen(char *s)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *constr;
+	char *constr, *empty;
 	unsigned int i;
 
+	empty = "";
 	if (s1 == NULL)
 	{
-		s1 = "";
+		s1 = empty;
 	}
 	if (s2 == NULL)
 	{
-		s2 = "";
+		s2 = empty;
 	}
 
-	if (n < _strlen(s2))
+	constr = malloc(_strlen(s1) + _strlen(s2));
+	if (constr == NULL)
 	{
-		constr = malloc(_strlen(s1) + n);
-		if (constr == NULL)
-			return (0);
+		return (NULL);
 	}
-	else
-	{
-		constr = malloc(_strlen(s1) + _strlen(s2));
-		if (constr == NULL)
-			return (0);
-	}
-
 	for (i = 0; i < _strlen(s1) + n; i++)
 	{
 		if (i < _strlen(s1))
