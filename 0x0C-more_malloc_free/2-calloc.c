@@ -18,12 +18,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 	fulsize = nmemb * size;
 	col = malloc(fulsize);
+
 	if (col == NULL)
 	{
 		return (0);
 	}
 
-	for (j = 0;j < nmemb; j++)
+	for (j = 0; j < nmemb; j++)
 	{
 		col[j] = 0;
 	}
