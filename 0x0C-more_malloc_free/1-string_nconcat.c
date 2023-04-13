@@ -35,14 +35,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < _strlen(s2))
 	{
 		constr = malloc(_strlen(s1) + n);
+		if (constr == NULL)
+			return (0);
 	}
 	else
 	{
 		constr = malloc(_strlen(s1) + _strlen(s2));
+		if (constr == NULL)
+			return (0);
 	}
-
-	if (constr == NULL)
-		return (0);
 
 	for (i = 0; i < _strlen(s1) + n; i++)
 	{
