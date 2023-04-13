@@ -23,7 +23,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (0);
 	}
 
-	for (; j < fulsize; j++)
+	for (; j < nmemb; j++)
 	{
 		col[j] = 0;
 	}
