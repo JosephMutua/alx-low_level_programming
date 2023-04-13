@@ -59,6 +59,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			s2++;
 		}
 	}
-	constr[i] = '\0'
+	constr[i] = '\0';
 	return (constr);
 }
