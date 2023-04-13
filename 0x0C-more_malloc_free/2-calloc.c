@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * _calloc -  locates memory to an array using malloc.
@@ -15,16 +14,16 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		return (NULL);
+		return (0);
 	}
 	fulsize = nmemb * size;
 	col = malloc(fulsize);
 	if (col == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
-	for (j = 0; j < fulsize; j++)
+	for (j = 0; j < nmemb; j++)
 	{
 		col[j] = 0;
 	}
