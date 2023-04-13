@@ -11,7 +11,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	int *col;
-	unsigned int j;
+	unsigned int j, fulsize;
 
 	if (nmemb == 0)
 	{
@@ -21,13 +21,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	col = malloc(nmemb * size);
+	fulsize = nmemb * size;
+	col = malloc(fulsize);
 	if (col == NULL)
 	{
 		return (NULL);
 	}
 
-	for (j = 0; j < nmemb; j++)
+	for (j = 0; j < fulsize; j++)
 	{
 		col[j] = 0;
 	}
