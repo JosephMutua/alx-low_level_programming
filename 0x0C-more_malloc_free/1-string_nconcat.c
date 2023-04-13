@@ -42,11 +42,19 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = empty;
 	}
 
-	constr = malloc(_strlen(s1) + _strlen(s2));
+	if (n >= _strlen(s2))
+	{
+		constr = malloc(sizeof(*s1) * (_strlen(s1) + _strlen(s2)));
+	}
+	else
+	{
+		constr = malloc(sizeof(*s1) * _strlen(s1));
+	}
 	if (constr == NULL)
 	{
 		return (NULL);
 	}
+
 	for (i = 0; i < _strlen(s1) + n; i++)
 	{
 		if (i < _strlen(s1))
