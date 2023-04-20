@@ -27,7 +27,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				value = "nil";
 
 			if (i == n - 1)
-				printf("%s\n", value);
+				printf("%s", value);
 			else
 			{
 				printf("%s", value);
@@ -35,4 +35,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			}
 		}
 	}
+	printf("\n");
 }
