@@ -43,10 +43,6 @@ void print_string(va_list value)
 	char *val;
 
 	val = va_arg(value, char *);
-	if (val == NULL)
-	{
-		val = "nil";
-	}
 	printf("%s", val);
 }
 		
