@@ -14,7 +14,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	va_list values;
 
-	if (separator == NULL || s*separator == 0)
+	if (separator == NULL || *separator == 0)
 		separator = "nil";
 	if (n > 0)
 	{
