@@ -2,7 +2,7 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print_int - prints an interefre 
+ * print_int - prints an integer
  * @value: the value to print
  *
  * Return: Nothing
@@ -45,7 +45,7 @@ void print_string(va_list value)
 	val = va_arg(value, char *);
 	printf("%s", val);
 }
-		
+
 /**
  * print_all - print anything
  * @format: the format of each input.
@@ -65,7 +65,7 @@ void print_all(const char * const format, ...)
 
 	va_start(values, format);
 	i = 0;
-	while (format && format[i]) 
+	while (format && format[i])
 	{
 		j = 0;
 		while (operation[j].opera)
