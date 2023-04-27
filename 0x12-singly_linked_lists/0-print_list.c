@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 
 /**
  * print_list - prints the all the elements in list_t
