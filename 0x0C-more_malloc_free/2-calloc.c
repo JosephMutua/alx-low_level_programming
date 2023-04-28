@@ -19,7 +19,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	fulsize = nmemb * size;
 	col = malloc(fulsize);
 
-	if (col == NULL)
+	if (!col)
 	{
 		return (NULL);
 	}
