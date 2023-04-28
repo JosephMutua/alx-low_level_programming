@@ -14,19 +14,20 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (nmemb == 0 || size == 0)
 	{
-		return (NULL);
+		return (0);
 	}
 	fulsize = nmemb * size;
 	col = malloc(fulsize);
 
-	if (!col)
+	if (col == NULL)
 	{
-		return (NULL);
+		return (0);
 	}
 
 	for (j = 0; j < fulsize; j++)
 	{
 		*col = 0;
 	}
+	free(col);
 	return (col);
 }
