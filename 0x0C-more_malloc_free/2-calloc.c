@@ -1,5 +1,6 @@
 #include <stdlib.h>
-
+#include <stdio.h>
+#include "main.h"
 /**
  * _calloc -  locates memory to an array using malloc.
  * @nmemb: the element of the array.
