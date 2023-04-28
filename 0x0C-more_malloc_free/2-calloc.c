@@ -29,5 +29,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		col[j] = 0;
 	}
+	free(col);
 	return (col);
 }
