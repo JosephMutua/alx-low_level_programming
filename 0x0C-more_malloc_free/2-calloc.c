@@ -13,7 +13,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	char *col;
 	unsigned int j, fulsize;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb <= 0 || size <= 0)
 	{
 		return (0);
 	}
@@ -27,8 +27,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	for (j = 0; j < fulsize; j++)
 	{
-		*col = 0;
+		col[j] = 0;
 	}
-	free(col);
 	return (col);
 }
