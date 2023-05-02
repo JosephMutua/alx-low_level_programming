@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdlib.h>
 
 /**
  * print_listint - prints elements in a list
@@ -9,8 +10,8 @@
 size_t print_listint(const listint_t *h)
 {
 	unsigned int i;
-	
-	if(h == NULL)
+
+	if (h == NULL)
 		return (0);
 	while (h)
 	{
