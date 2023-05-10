@@ -2,6 +2,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <fcntl.h>
+#include "main.h"
 
 /**
  * create_file - creates a new file
@@ -14,11 +15,9 @@ int create_file(const char *filename, char *text_content)
 {
 	int len, fl, wr;
 
-	if (filename == NULL)
+	if (filename == NULL || text_content == NULL)
 		return (-1);
 	fl = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
-	if (fl < 0)
-		return (-1);
 	len = 0;
 	wr = 0;
 	while (text_content && text_content[len])
