@@ -18,6 +18,8 @@ int create_file(const char *filename, char *text_content)
 	if (!filename)
 		return (-1);
 	fl = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+	if (fl < 0)
+		return (-1);
 	len = 0;
 	wr = 0;
 	if (text_content != NULL)

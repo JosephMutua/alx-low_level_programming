@@ -17,6 +17,7 @@ int main(int ac, char **av)
 		exit(1);
 	}
 	res = create_file(av[1], av[2]);
+	res = create_file("_file_0", "Best School !");
 	printf("-> %i)\n", res);
 	return (0);
 }
