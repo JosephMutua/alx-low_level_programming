@@ -98,6 +98,7 @@ int main(int ac, char *av[])
 		exit(100);
 	}
 	err = close(fd_2);
+	if (err < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd_2);
 		exit(100);
