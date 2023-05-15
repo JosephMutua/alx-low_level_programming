@@ -203,7 +203,7 @@ void printentry(char *head)
 		printf("%x", head[i--]);
 		while (i >= 0x18)
 			printf("%02x", (unsigned char) head[i--]);
-		printf("/n");
+		printf("\n");
 	}
 	else
 	{
