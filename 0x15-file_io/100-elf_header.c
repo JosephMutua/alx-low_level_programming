@@ -58,7 +58,7 @@ int main(int ac, char *av[])
  */
 void printclass(char *head)
 {
-	printf(" %-35s", "Class:");
+	printf("  %-35s", "Class:");
 	if (head[4] == 2)
 		printf("ELF64\n");
 	else if (head[4] == 1)
