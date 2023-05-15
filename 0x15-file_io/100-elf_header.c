@@ -35,10 +35,10 @@ int main(int ac, char *av[])
 		return (1);
 	if (head[0] != 0x7f || head[1] != 'E' || head[2] != 'L' || head[3] != 'F')
 	{
-		dprintf(STDERR_FILENO, "readelf: Error: hellofile: Failed to read file header\n");
+		dprintf(STDERR_FILENO, "Failed to read file header\n");
 		return (98);
 	}
-	printf("ELF Header:\n  Magic:   ");
+	printf("ELF Header:\n Magic:   ");
 	for (j = 0; j < 16; j++)
 		printf("%02x ", (unsigned int) head[j]);
 	printf("\n");
