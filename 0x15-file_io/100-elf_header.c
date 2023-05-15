@@ -38,7 +38,7 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Failed to read file header\n");
 		return (98);
 	}
-	printf("ELF Header:\n  Magic:  ");
+	printf("ELF Header:\n  Magic:   ");
 	for (j = 0; j < 16; j++)
 		printf("%02x ", (unsigned int) head[j]);
 	printf("\n");
