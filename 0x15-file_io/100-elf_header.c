@@ -38,7 +38,7 @@ int main(int ac, char *av[])
 		dprintf(STDERR_FILENO, "Failed to read file header\n");
 		return (98);
 	}
-	printf("ELF Header:\n Magic:   ");
+	printf("ELF Header:\n  Magic:   ");
 	for (j = 0; j < 16; j++)
 		printf("%02x ", (unsigned int) head[j]);
 	printf("\n");
@@ -189,7 +189,7 @@ void printentry(char *head)
 {
 	int i, j;
 
-	printf("  %-35s0x", "Entry point address:");
+	printf("  %-34s0x", "Entry point address:");
 	if (head[4] == 2)
 		j = 0x1f;
 	else
