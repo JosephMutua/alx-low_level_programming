@@ -64,7 +64,7 @@ void printclass(char *head)
 	else if (head[4] == 1)
 		printf("ELF32\n");
 	else
-		printf("<Unknown: %02hx", head[4]);
+		printf("<Unknown: %02hx>", head[4]);
 }
 /**
  * printdata - prints the informaation about data organization
@@ -189,7 +189,7 @@ void printentry(char *head)
 {
 	int i, j;
 
-	printf("  %-34s0x", "Entry point address:");
+	printf("  %-35s0x", "Entry point address:");
 	if (head[4] == 2)
 		j = 0x1f;
 	else
