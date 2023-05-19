@@ -102,7 +102,7 @@ void printversion(char *head)
 	}
 	else
 	{
-		printf(" (current)\n");
+		printf("49 <unknown %%lx>");
 	}
 }
 /**
