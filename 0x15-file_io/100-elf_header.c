@@ -42,7 +42,7 @@ int main(int ac, char *av[])
 	for (j = 0; j < 16; j++)
 	{
 		if (j == 16 - 1)
-			printf("%02x", (unsigned int) head[i]
+			printf("%02x", (unsigned int) head[j]);
 		printf("%02x ", (unsigned int) head[j]);
 	}
 	printf("\n");
