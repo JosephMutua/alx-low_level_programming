@@ -43,7 +43,8 @@ int main(int ac, char *av[])
 	{
 		if (j == 16 - 1)
 			printf("%02x", (unsigned int) head[j]);
-		printf("%02x ", (unsigned int) head[j]);
+		else
+			printf("%02x ", (unsigned int) head[j]);
 	}
 	printf("\n");
 	printclass(head);
