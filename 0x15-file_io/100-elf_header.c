@@ -40,7 +40,11 @@ int main(int ac, char *av[])
 	}
 	printf("ELF Header:\n  Magic:   ");
 	for (j = 0; j < 16; j++)
+	{
+		if (j == 16 - 1)
+			printf("%02x", (unsigned int) head[i]
 		printf("%02x ", (unsigned int) head[j]);
+	}
 	printf("\n");
 	printclass(head);
 	printdata(head);
